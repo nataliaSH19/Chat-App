@@ -1,0 +1,25 @@
+.home-container {
+    display: flex;
+    padding: 25px;
+    gap: 1rem;
+    height: 450px;
+
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+
+    height: 450px;
+    /* Small screen height */
+    max-height: 550px;
+    /* Medium screen height */
+    border-radius: 12px;
+    /* Rounded corners equivalent to rounded-lg */
+
+
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        height: 550px;
+    }
+}
