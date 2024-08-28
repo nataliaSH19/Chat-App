@@ -37,3 +37,13 @@ To run this project locally, follow these steps:
 ```bash
 git clone https://github.com/yourusername/chat-app.git
 cd chat-app
+
+### 1.Build the app
+
+```bash
+npm run build
+
+### 1.Start the app
+
+```bash
+npm start
