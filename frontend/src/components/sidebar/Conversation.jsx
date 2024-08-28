@@ -1,23 +1,29 @@
 import React from 'react'
 import './Sidebar.css'
+import useConversation from '../../zustans/useConversation'
+import { useSocketContext } from '../../context/SocketContext';
 
-const Conversation = () => {
+const Conversation = ({ conversation }) => {
+  const { selectedConversation, setSelectedConversation } = useConversation();
+
+  const isSelected = selectedConversation?._id === conversation._id
+  const { onlineUsers } = useSocketContext()
+  const isOnline = onlineUsers.includes(conversation._id)
   return (
     <>
-      <div class="user-card">
-        <div class="avatar online">
-            <img src="https://cdn0.iconfinder.com/data/icons/communication-line-10/24/account_profile_user_contact_person_avatar_placeholder-512.png" alt="user avatar" class="avatar-img" />
+      <div className={`user-card ${isSelected ? "selected-user-card" : ""}`} onClick={() => setSelectedConversation(conversation)}>
+        <div className={`avatar ${isOnline ? "online" : ""}`}>
+          <img src={conversation.profilePic} alt="user avatar" className="avatar-img" />
         </div>
 
-        <div class="user-info">
-            <div class="user-header">
-                <p class="user-name">John Doe</p>
-                <span class="user-status">🎃</span>
-            </div>
+        <div className="user-info">
+          <div className="user-header">
+            <p className="user-name">{conversation.fullName}</p>
+          </div>
         </div>
-    </div>
+      </div>
 
-<hr class="divider" />
+      <hr class="divider" />
 
     </>
   )

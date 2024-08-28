@@ -45,8 +45,7 @@
 
 .chat-bubble {
     color: white;
-    background-color: #4a90e2;
-    /* Replace with the desired background color */
+    background-color: #747b83;
     border-radius: 15px;
     padding: 10px;
     margin-top: 5px;
@@ -55,20 +54,35 @@
     margin-bottom: 10px;
 }
 
+.myBgColor {
+    background-color: #4a90e2;
+}
+
 
 .chat-footer {
     opacity: 0.5;
     font-size: 0.75rem;
     display: flex;
-    gap: 0.25rem;
+    justify-content: flex-end;
     align-items: center;
     color: #b0b0b0;
-    margin-top: 5px;
+    margin-top: 2px;
 }
 
 .chat {
     display: flex;
+    gap: 8px;
 }
+
+.chat-end {
+    justify-content: flex-end;
+
+}
+
+.chat-start {
+    justify-content: flex-start;
+}
+
 
 .chat-form {
     padding: 0 1rem;

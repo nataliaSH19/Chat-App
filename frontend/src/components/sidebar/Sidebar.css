@@ -56,6 +56,10 @@
     transition: background-color 0.3s ease;
 }
 
+.selected-user-card {
+    background-color: #51bcee;
+}
+
 .user-card:hover {
     background-color: #0ea5e9;
     color: #feffff;
@@ -93,11 +97,7 @@
 }
 
 
-.user-header {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-}
+
 
 .user-name {
     font-weight: bold;
